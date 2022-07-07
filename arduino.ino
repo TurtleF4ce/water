@@ -1,20 +1,33 @@
+# Arduino code to check if moister level of the soil is under a procentage.
 
+# Pins that are used with on the arduinop
 const int analogInPin = A0;
-const int testPin = A1;
 const int relayPin = 2;
+
+# Settings for freqensy
 const int Hz = 2;
+
+# Setting for the sensor value
 const int dry = 80;
+
+# Variables that are used in the script
 const long serial = 9600*Hz;
 const long sekund = 1000/Hz;
-const long hour = 60*60;
-const long restSensor = 2*hour;
+const long hour = 60;
+const long restSensor = Hz*hour;
 const long sensorDelay = 60;
 const float dl = 2.1*sekund;
-const int amount = 2*dl;
+const int amount = Hz*dl;
+
+# Defult values
 bool watered = false;
 int sensorValue = 0;
 int outputValue = 0;
 int value = 0;
+
+
+
+
 
 
 
